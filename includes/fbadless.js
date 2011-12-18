@@ -22,7 +22,8 @@ var oexFacebookadless = function()
 	var elem = document.getElementById("pagelet_ticker");
     if (elem != null) {
 		var childs = elem.childNodes;
-		if (childs!=null&&childs[0]!=null) var childsNew = childs[0].childNodes;
+		if (childs!=null && childs[0]!=null) var childsNew = childs[0];
+		if (childsNew!=null) childsNew = childsNew.childNodes;
 		if (childsNew!=null) var ad = childsNew[2];
 		if (ad!=null) ad.style.height="576px";
 	}
