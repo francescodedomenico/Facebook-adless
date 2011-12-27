@@ -6,7 +6,7 @@
 var oexFacebookadless = function()
 {
   
-  window.addEventListener('DOMContentLoaded', function()
+  window.addEventListener('load', function()
   {
     function removeElementByID(id)
     {
@@ -15,8 +15,12 @@ var oexFacebookadless = function()
     }
 	/* Insert elements id to remove here */
 	removeElementByID('pagelet_ego_pane_w');
-	removeElementByID('pagelet_side_ads');
+	
 	removeElementByID('pagelet_ego_pane');
+	
+	//removing pagelet_side_ads, using visibility hidden to do not break DOM
+	var pagelet = document.getElementById("pagelet_side_ads");
+	if (pagelet != null) pagelet.style.visibility="hidden";
 	
 	/* change app side scrollbar activity */
 	var elem = document.getElementById("pagelet_ticker");
@@ -27,6 +31,9 @@ var oexFacebookadless = function()
 		if (childsNew!=null) var ad = childsNew[2];
 		if (ad!=null) ad.style.height="576px";
 	}
+	
+	
+	
   },false);
   
 }();
