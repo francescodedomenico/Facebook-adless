@@ -6,17 +6,14 @@
 var oexFacebookadless = function()
 {
   
-  window.addEventListener('load', function()
+  window.addEventListener('DOMNodeInserted', function()
   {
-    function removeElementByID(id)
-    {
-      var elem = document.getElementById(id);
-      if (elem != null) elem.parentNode.removeChild(elem);
-    }
 	/* Insert elements id to remove here */
-	removeElementByID('pagelet_ego_pane_w');
+	var x = document.getElementById("pagelet_ego_pane_w");
+	if (x != null) x.style.visibility="hidden";
 	
-	removeElementByID('pagelet_ego_pane');
+	var y = document.getElementById("pagelet_ego_pane");
+	if (y != null) y.style.visibility="hidden";
 	
 	//removing pagelet_side_ads, using visibility hidden to do not break DOM
 	var pagelet = document.getElementById("pagelet_side_ads");
