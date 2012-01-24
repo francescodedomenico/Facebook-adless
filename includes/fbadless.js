@@ -19,6 +19,10 @@ var oexFacebookadless = function()
 	var pagelet = document.getElementById("pagelet_side_ads");
 	if (pagelet != null) pagelet.style.visibility="hidden";
 	
+	//removing ad on theater mode
+	var th = document.getElementById("fbPhotoSnowboxAdsBottom");
+	if (th != null) th.parentNode.style.visibility="hidden";
+	
 	/* change app side scrollbar activity */
 	var elem = document.getElementById("pagelet_ticker");
     if (elem != null) {
