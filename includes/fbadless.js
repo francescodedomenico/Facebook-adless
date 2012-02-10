@@ -23,6 +23,11 @@ var oexFacebookadless = function()
 	var th = document.getElementById("fbPhotoSnowboxAdsBottom");
 	if (th != null) th.parentNode.style.visibility="hidden";
 	
+	//removing ad from message reading pane
+	th = document.getElementById("MessagingNetegoWrapper");
+	if (th != null) th.parentNode.style.visibility="hidden";
+	
+	
 	th = document.getElementById("fbPhotoSnowboxAdsSide");
 	if (th != null) th.parentNode.style.visibility="hidden";
 	
