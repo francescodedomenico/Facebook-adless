@@ -24,7 +24,7 @@ var oexFacebookadless = function()
 	if (th != null) th.parentNode.style.visibility="hidden";
 	
 	//removing ad from message reading pane
-	th = document.getElementById("MessagingNetegoWrapper");
+	th = document.getElementById("MessagingNetegoSidebar");
 	if (th != null) th.parentNode.style.visibility="hidden";
 	
 	
