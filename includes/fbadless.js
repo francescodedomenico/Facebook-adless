@@ -5,31 +5,26 @@
 
 var oexFacebookadless = function()
 {
+	var ads = new Array(
+	"pagelet_ego_pane_w",
+	"pagelet_ego_pane",
+	"pagelet_side_ads", //removing pagelet_side_ads, using visibility hidden to do not break DOM
+	"fbPhotoSnowboxAdsBottom", //removing ad on theater mode
+	"MessagingNetegoSidebar", //removing ad from message reading pane
+	"fbPhotoSnowboxAdsSide"
+	);
   
   window.addEventListener('DOMNodeInserted', function()
   {
-	/* Insert elements id to remove here */
-	var x = document.getElementById("pagelet_ego_pane_w");
-	if (x != null) x.style.visibility="hidden";
+	var temp = null;
 	
-	var y = document.getElementById("pagelet_ego_pane");
-	if (y != null) y.style.visibility="hidden";
-	
-	//removing pagelet_side_ads, using visibility hidden to do not break DOM
-	var pagelet = document.getElementById("pagelet_side_ads");
-	if (pagelet != null) pagelet.style.visibility="hidden";
-	
-	//removing ad on theater mode
-	var th = document.getElementById("fbPhotoSnowboxAdsBottom");
-	if (th != null) th.parentNode.style.visibility="hidden";
-	
-	//removing ad from message reading pane
-	th = document.getElementById("MessagingNetegoSidebar");
-	if (th != null) th.parentNode.style.visibility="hidden";
-	
-	
-	th = document.getElementById("fbPhotoSnowboxAdsSide");
-	if (th != null) th.parentNode.style.visibility="hidden";
+	for (var i=0; i<ads.length; i++){
+		temp = document.getElementById(ads[i]);
+		if(temp != null){
+			temp.style.visibility="hidden";
+			temp=null;
+		}
+	}
 	
 	/* change app side scrollbar activity */
 	var elem = document.getElementById("pagelet_ticker");
