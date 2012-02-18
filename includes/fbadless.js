@@ -12,7 +12,8 @@ var oexFacebookadless = function()
 	"fbPhotoSnowboxAdsBottom", //removing ad on theater mode
 	"MessagingNetegoSidebar", //removing ad from message reading pane
 	"fbPhotoSnowboxAdsSide",
-	"fbPhotoSnowliftAdsSide"
+	"fbPhotoSnowliftAdsSide",
+	"fbPhotoSnowboxAdsSide"
 	);
   
   window.addEventListener('DOMNodeInserted', function()
