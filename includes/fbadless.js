@@ -11,7 +11,8 @@ var oexFacebookadless = function()
 	"pagelet_side_ads", //removing pagelet_side_ads, using visibility hidden to do not break DOM
 	"fbPhotoSnowboxAdsBottom", //removing ad on theater mode
 	"MessagingNetegoSidebar", //removing ad from message reading pane
-	"fbPhotoSnowboxAdsSide"
+	"fbPhotoSnowboxAdsSide",
+	"tips_main_box"
 	);
   
   window.addEventListener('DOMNodeInserted', function()
