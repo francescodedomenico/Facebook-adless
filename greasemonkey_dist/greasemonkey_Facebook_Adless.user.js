@@ -32,6 +32,7 @@ function removeElementByID(b){var a=document.getElementById(b);if(a!=null){a.par
 	hideElementByClassName("div","-cx-PRIVATE-snowliftAds__root rhcFooter");
 	hideElementByClassName("div","ego_column");
 	hideElementByClassName("div","ego_section");
+	hideElementByClassName("div","clearfix uiHeaderTop");
 	hideElementByClassName("div","_24q rhcFooter");
 	for (var i=0; i<ads.length; i++){
 		temp = document.getElementById(ads[i]);

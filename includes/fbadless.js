@@ -31,10 +31,13 @@ function removeElementByID(b){var a=document.getElementById(b);if(a!=null){a.par
 	hideElementByClassName("div","clearfix uiHeaderTop");
 	hideElementByClassName("div","_24q rhcFooter");
 	for (var i=0; i<ads.length; i++){
-		temp = document.getElementById(ads[i]);
-		if(temp != null){
-			temp.style.visibility="hidden";
-			temp=null;
+		if(ads[i]!=null){
+			temp = document.getElementById(ads[i]);
+			if(temp != null){
+				temp.style.visibility="hidden";
+				temp=null;
+				delete ads[i];
+			}
 		}
 	}
 	
