@@ -29,12 +29,23 @@ var oexFacebookadless = window["oexFacebookadless"] = function() {
   function cleanAds(event){
 	var node = event.target;
 	if(node!=null){
+			if(node.className==="PageLikedButton _52nf _3spg hidden_elem uiButton uiButtonOverlay"){
+				var temp = node.parentNode;
+				while(1){
+					if(temp.nodeName==="LI")
+						break;
+					temp = temp.parentNode;
+				}
+				temp.parentNode.removeChild(temp);
+				return;
+			}
 			if(node.id==="pagelet_ticker"){
 				var childs = node.childNodes;
 				if (childs != null && childs[0] != null) var childsNew = childs[0];
 				if (childsNew != null) var childsNew = childsNew.childNodes;
 				if (childsNew != null) var ad = childsNew[2];
 				if (ad != null) ad.style.height = "576px";
+				return;
 			}
 			for(var i=0;i<adsClass.length;i++){
 				if(node.className===adsClass[i]){
