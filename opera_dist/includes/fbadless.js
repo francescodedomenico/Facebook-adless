@@ -1,15 +1,6 @@
-// ==UserScript==
-// @name        Facebook Adless
-// @namespace   http://www.facebook.com/
-// @description Removes ads from Facebook
-// @include     http://*facebook.com/*
-// @include     https://*facebook.com/*
-// @version     1
-// ==/UserScript==
-
-var oexFacebookadless = function()
-{
-	//jsDOMTools v0.1
+opera.isReady(function(){
+var oexFacebookadless = window["oexFacebookadless"] = function() {
+		//jsDOMTools v0.1
 		//author: Francesco De Domenico
 		//website: https://github.com/frankdd89/jsDOMTools
 		function removeElementByID(b){var a=document.getElementById(b);if(a!=null){a.parentNode.removeChild(a)}}function getElementByClassName(f,g){var c=document.getElementsByTagName(f);var d=new Array();var a=0;if(c!=null){for(var e=0,b=c.length;e<b;e++){if(c[e].getAttribute("class")==g){d[a]=c[e];a++}}}return d}function removeElementByClassName(d,e){var b=document.getElementsByTagName(d);if(b!=null){for(var c=0,a=b.length;c<a;c++){if(b[c].getAttribute("class")==e){b[c].parentNode.removeChild(b[c])}}}}function hideElementByClassName(d,e){var b=document.getElementsByTagName(d);if(b!=null){for(var c=0,a=b.length;c<a;c++){if(b[c].getAttribute("class")==e){b[c].style.visibility="hidden"}}}};
@@ -59,5 +50,5 @@ var oexFacebookadless = function()
 	}
 	}
   window.addEventListener('DOMNodeInserted', cleanAds, false);
-  
 }();
+});
